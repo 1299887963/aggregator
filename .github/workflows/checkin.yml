@@ -1,5 +1,6 @@
 name: checkin
 on:
+  workflow_dispatch: # 手动触发
   schedule:     
   - cron:  '45 05 * * *'
 
