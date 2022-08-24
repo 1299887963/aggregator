@@ -21,6 +21,10 @@ jobs:
         python-version: '3.x'
         architecture: 'x64'
     - run: python ./.github/actions/checkin/main.py
+      env:
+        AP_DOMAINS: ${{ secrets.AP_DOMAINS }}
+        AP_EMAILS: ${{ secrets.AP_EMAILS }}
+        AP_PASSWORDS: ${{ secrets.AP_PASSWORDS }}      
 
     - name: timestamp
       run: date
